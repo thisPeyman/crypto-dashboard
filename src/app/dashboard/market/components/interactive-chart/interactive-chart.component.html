@@ -1,0 +1,99 @@
+<div class="h-full py-10 px-16" *ngIf="data$ | async as data">
+  <app-company-info></app-company-info>
+
+  <div class="grid grid-cols-3 grid-rows-4 gap-6 mt-5">
+    <div class="flex items-center justify-between p-4">
+      <div class="flex flex-col">
+        <p class="text-2xl font-bold flex items-center gap-1">
+          <span class="text-4xl text-gray-500 font-normal">$</span> 324.3
+        </p>
+        <span class="flex gap-1 mt-2 text-green-500">
+          <mat-icon>trending_up</mat-icon>
+          <h1>Bitcoin</h1>
+        </span>
+      </div>
+      <ngx-charts-line-chart
+        [results]="data"
+        [view]="[200, 100]"
+      ></ngx-charts-line-chart>
+    </div>
+    <div class="col-span-2">
+      <div class="grid grid-cols-3 p-4 justify-items-center">
+        <div class="currency-item">
+          <h3>Litecoin</h3>
+          <p class="text-2xl font-bold flex items-center gap-1">
+            <span class="text-4xl text-gray-500 font-normal">$</span> 324.3
+          </p>
+          <p class="flex items-center text-green-500 gap-1">
+            <mat-icon>trending_up</mat-icon> +12(6.3%)
+          </p>
+        </div>
+        <div class="currency-item">
+          <h3>Bitcoin</h3>
+          <p class="text-2xl font-bold flex items-center gap-1">
+            <span class="text-4xl text-gray-500 font-normal">$</span> 324.3
+          </p>
+          <p class="flex items-center text-green-500 gap-1">
+            <mat-icon>trending_up</mat-icon> +12(6.3%)
+          </p>
+        </div>
+        <div class="currency-item">
+          <h3>Ether</h3>
+          <p class="text-2xl font-bold flex items-center gap-1">
+            <span class="text-4xl text-gray-500 font-normal">$</span> 324.3
+          </p>
+          <p class="flex items-center text-red-500 gap-1">
+            <mat-icon>trending_down</mat-icon> -2(6.3%)
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row-span-3 col-span-2 flex items-center justify-center flex-col"
+    >
+      <p class="text-lg font-thin">This a demo chart for testing components</p>
+      <ngx-charts-polar-chart
+        class="mx-auto"
+        [results]="data"
+        [view]="[400, 400]"
+      ></ngx-charts-polar-chart>
+    </div>
+    <div class="row-span-2 text-left p-5">
+      <h3 class="text-lg font-semibold pb-5">Details</h3>
+      <div class="flex flex-col gap-7">
+        <p class="flex justify-between">
+          <span class="text-gray-500">Lorem ipsum</span>
+          <span class="font-bold">{{ 213.21 | currency }}</span>
+        </p>
+        <p class="flex justify-between">
+          <span class="text-gray-500">Dolorum, doloribus</span>
+          <span class="font-bold">{{ 13.211 | currency }}</span>
+        </p>
+        <p class="flex justify-between">
+          <span class="text-gray-500">impedit vero</span>
+          <span class="font-bold">{{ 23.21 | currency }}</span>
+        </p>
+        <p class="flex justify-between">
+          <span class="text-gray-500">necessitatibus error</span>
+          <span class="font-bold">{{ 213.21 | currency }}</span>
+        </p>
+      </div>
+    </div>
+    <div class="flex justify-center items-center">
+      <div class="flex gap-5">
+        <div class="flex flex-col gap-2 items-center">
+          <p class="font-bold">{{ 23.4 | currency }}</p>
+          <button class="btn w-28 btn-primary">Buy</button>
+        </div>
+        <div class="flex flex-col gap-2 items-center">
+          <p class="font-bold">{{ 22.4 | currency }}</p>
+          <button
+            class="btn w-28 btn-secondary text-primary hover:text-gray-50"
+          >
+            Sell
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
