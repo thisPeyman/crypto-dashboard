@@ -1,0 +1,9 @@
+<a
+  routerLink="/dashboard/{{ url }}"
+  [routerLinkActiveOptions]="{ exact: true }"
+  routerLinkActive="active-item"
+  class="flex text-gray-600 gap-4 items-center hover:bg-secondary hover:text-primary py-3 px-4 rounded-md cursor-pointer"
+>
+  <mat-icon class="icon">{{ icon }}</mat-icon>
+  <span class="text-lg font-light">{{ label }}</span>
+</a>
