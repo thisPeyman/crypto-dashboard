@@ -1,0 +1,9 @@
+.grid {
+  div {
+    @apply bg-white rounded-md shadow-sm;
+  }
+}
+
+.currency-item {
+  @apply flex flex-col gap-2;
+}

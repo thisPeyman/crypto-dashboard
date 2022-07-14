@@ -1,0 +1,8 @@
+ul {
+  li {
+    @apply cursor-pointer text-gray-500;
+    a {
+      @apply p-1 hover:text-gray-50 hover:border-b-white hover:border-b-2 transition-all duration-75;
+    }
+  }
+}
